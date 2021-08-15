@@ -1,6 +1,3 @@
-import 'package:cuguys/information_page/Building_Background.dart';
-import 'package:cuguys/information_page/Four_Major_Activities.dart';
-import 'package:cuguys/information_page/History.dart';
 import 'package:flutter/material.dart';
 
 void main() {

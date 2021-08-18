@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:bychonce/fourMajorActivitiesPage.dart';
+import 'package:bychonce/historyPage.dart';
+import 'package:bychonce/buildingBackground.dart';
 
 void main() {
   runApp(CuGuys());

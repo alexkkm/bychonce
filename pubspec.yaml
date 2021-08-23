@@ -50,6 +50,18 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
+  assets:
+    - images/樂群館.jpg
+    - images/圓形廣場.jpg
+    - images/新亞水塔.jpg
+    - images/history1.jpg
+    - images/history2.jpg
+    - images/history3.jpg
+    - images/ocamp.jpg
+    - images/decorationday.jpg
+    - images/nasing.jpg
+    - images/nanight.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

@@ -33,7 +33,7 @@ class _BuildingBackgroundPageState extends State<BuildingBackgroundPage> {
         title: Row(
           children: [
             Container(
-                width: 200,
+                width: 175,
                 child: Text(
                     (language == "Chinese") ? "建築背景" : "Building Background")),
             TextButton(

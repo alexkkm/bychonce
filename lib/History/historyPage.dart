@@ -29,7 +29,7 @@ class _HistoryPageState extends State<HistoryPage> {
         title: Row(
           children: [
             Container(
-                width: 200,
+                width: 175,
                 child: Text(
                     (language == "Chinese") ? "新亞歷史" : "New Asia History")),
             TextButton(

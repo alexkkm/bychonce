@@ -51,13 +51,12 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
-              width: 100,
+              width: 225,
               child: Text(
                 (language == "Chinese") ? "主頁" : "Home Page",
                 textAlign: TextAlign.left,
               ),
             ),
-            Container(width: 150),
             TextButton(
               onPressed: () => switchChinese(),
               child: Text(

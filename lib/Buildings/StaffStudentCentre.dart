@@ -29,7 +29,7 @@ class _StaffStudentCenterPageState extends State<StaffStudentCenterPage> {
         title: Row(
           children: [
             Container(
-                width: 200,
+                width: 175,
                 child: Text((language == "Chinese")
                     ? "樂群館梁雄姬樓"
                     : "Staff Student Centre")),

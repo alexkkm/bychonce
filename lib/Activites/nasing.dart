@@ -29,7 +29,7 @@ class _NASingPageState extends State<NASingPage> {
         title: Row(
           children: [
             Container(
-                width: 200,
+                width: 175,
                 child: Text((language == "Chinese")
                     ? "新亞書院歌唱比賽"
                     : "New Asia Singing Competition")),

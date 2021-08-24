@@ -34,7 +34,7 @@ class _FourMajorActivitiesPageState extends State<FourMajorActivitiesPage> {
         title: Row(
           children: [
             Container(
-                width: 200,
+                width: 160,
                 child: Text((language == "Chinese")
                     ? "四大活動"
                     : "Four Major Activities")),

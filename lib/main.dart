@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                 textAlign: TextAlign.left,
               ),
             ),
-            Container(width: 150),
+            Container(width: 125),
             TextButton(
               onPressed: () => switchChinese(),
               child: Text(

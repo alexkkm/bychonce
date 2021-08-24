@@ -29,7 +29,7 @@ class _WaterTowerPageState extends State<WaterTowerPage> {
         title: Row(
           children: [
             Container(
-                width: 200,
+                width: 175,
                 child: Text(
                     (language == "Chinese") ? "新亞水塔" : "New Asia water Tower")),
             TextButton(

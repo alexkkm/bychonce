@@ -29,7 +29,7 @@ class _AmphitheatrePageState extends State<AmphitheatrePage> {
         title: Row(
           children: [
             Container(
-                width: 200,
+                width: 175,
                 child: Text((language == "Chinese")
                     ? "圓形廣場"
                     : "New Asia Amphitheatre")),

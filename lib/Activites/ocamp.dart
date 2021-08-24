@@ -29,7 +29,7 @@ class _OcampPageState extends State<OcampPage> {
         title: Row(
           children: [
             Container(
-                width: 200,
+                width: 175,
                 child: Text((language == "Chinese")
                     ? "新亞書院迎新營"
                     : "New Asia Orientation Camp")),

@@ -29,9 +29,13 @@ class _NANightPageState extends State<NANightPage> {
         title: Row(
           children: [
             Container(
-                width: 175,
-                child:
-                    Text((language == "Chinese") ? "新亞夜" : "New Asia Night")),
+              width: 175,
+              child: Text(
+                ((language == "Chinese") ? "新亞夜" : "New Asia Night"),
+                style: TextStyle(fontSize: 25),
+                textAlign: TextAlign.left,
+              ),
+            ),
             TextButton(
               onPressed: () => switchChinese(),
               child: Text(

@@ -1,4 +1,4 @@
-import 'package:bychonce/Activites/decorationday.dart';
+import 'package:bychonce/Activites/Decorationday.dart';
 import 'package:bychonce/Activites/nanight.dart';
 import 'package:bychonce/Activites/nasing.dart';
 import 'package:bychonce/Activites/ocamp.dart';
@@ -34,10 +34,13 @@ class _FourMajorActivitiesPageState extends State<FourMajorActivitiesPage> {
         title: Row(
           children: [
             Container(
-                width: 175,
-                child: Text((language == "Chinese")
-                    ? "四大活動"
-                    : "Four Major Activities")),
+              width: 175,
+              child: Text(
+                (((language == "Chinese") ? "四大活動" : "Four Major Activities")),
+                style: TextStyle(fontSize: 25),
+                textAlign: TextAlign.left,
+              ),
+            ),
             TextButton(
               onPressed: () => switchChinese(),
               child: Text(
@@ -75,7 +78,7 @@ class _FourMajorActivitiesPageState extends State<FourMajorActivitiesPage> {
                       (language == "Chinese")
                           ? "新亞書院迎新營"
                           : "New Asia Orientation Camp",
-                      style: TextStyle(fontSize: 35, color: Color(0XFFc06c30)),
+                      style: TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
                     ),
                   ],
                 ))),
@@ -101,7 +104,7 @@ class _FourMajorActivitiesPageState extends State<FourMajorActivitiesPage> {
                       (language == "Chinese")
                           ? "新亞書院校慶"
                           : "New Asia DecorationDay",
-                      style: TextStyle(fontSize: 35, color: Color(0XFFc06c30)),
+                      style: TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
                     ),
                   ],
                 ))),
@@ -125,7 +128,7 @@ class _FourMajorActivitiesPageState extends State<FourMajorActivitiesPage> {
                       (language == "Chinese")
                           ? "新亞書院歌唱比賽"
                           : "New Asia Singing Competition",
-                      style: TextStyle(fontSize: 35, color: Color(0XFFc06c30)),
+                      style: TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
                     ),
                   ],
                 ))),
@@ -147,7 +150,7 @@ class _FourMajorActivitiesPageState extends State<FourMajorActivitiesPage> {
                     Padding(padding: EdgeInsets.only(left: 21.0)),
                     Text(
                       (language == "Chinese") ? "新亞夜" : "New Asia Night",
-                      style: TextStyle(fontSize: 35, color: Color(0XFFc06c30)),
+                      style: TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
                     ),
                   ],
                 ))),

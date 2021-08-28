@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:bychonce/Activites/fourMajorActivitiesPage.dart';
-import 'package:bychonce/History/historyPage.dart';
-import 'package:bychonce/Buildings/buildingBackground.dart';
+import 'package:bychonce/Activites/FourMajorActivitiesPage.dart';
+import 'package:bychonce/History/HistoryPage.dart';
+import 'package:bychonce/Buildings/BuildingBackground.dart';
 
 void main() {
   runApp(CuGuys());
@@ -51,13 +51,13 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
-              width: 100,
+              width: 220,
               child: Text(
                 (language == "Chinese") ? "主頁" : "Home Page",
                 textAlign: TextAlign.left,
               ),
             ),
-            Container(width: 125),
+            Container(width: 10),
             TextButton(
               onPressed: () => switchChinese(),
               child: Text(
@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                             ? "建築背景"
                             : "Building Background",
                         style:
-                            TextStyle(fontSize: 35, color: Color(0XFFc06c30)),
+                            TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
                       ),
                     ],
                   ))),
@@ -127,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                             ? "新亞四大活動"
                             : "Four Major Activities",
                         style:
-                            TextStyle(fontSize: 35, color: Color(0XFFc06c30)),
+                            TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
                       ),
                     ],
                   ))),
@@ -150,7 +150,7 @@ class _HomePageState extends State<HomePage> {
                       Text(
                         (language == "Chinese") ? "簡史" : "History",
                         style:
-                            TextStyle(fontSize: 35, color: Color(0XFFc06c30)),
+                            TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
                       ),
                     ],
                   ))),

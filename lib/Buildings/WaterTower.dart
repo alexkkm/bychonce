@@ -29,9 +29,13 @@ class _WaterTowerPageState extends State<WaterTowerPage> {
         title: Row(
           children: [
             Container(
-                width: 175,
-                child: Text(
-                    (language == "Chinese") ? "新亞水塔" : "New Asia water Tower")),
+              width: 175,
+              child: Text(
+                ((language == "Chinese") ? "新亞水塔" : "New Asia water Tower"),
+                style: TextStyle(fontSize: 25),
+                textAlign: TextAlign.left,
+              ),
+            ),
             TextButton(
               onPressed: () => switchChinese(),
               child: Text(

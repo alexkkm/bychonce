@@ -45,42 +45,45 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: <Widget>[
-      //background
-      Image.asset("images/background.jpg"),
-
-      //top level
-      Scaffold(
-        appBar: AppBar(
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Container(
-                width: 220,
-                child: Text(
-                  (language == "Chinese") ? "主頁" : "Home Page",
-                  textAlign: TextAlign.left,
-                ),
+    return Scaffold(
+      //appbar
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+              width: 220,
+              child: Text(
+                (language == "Chinese") ? "主頁" : "Home Page",
+                textAlign: TextAlign.left,
               ),
-              Container(width: 10),
-              TextButton(
-                onPressed: () => switchChinese(),
-                child: Text(
-                  "中",
-                  style: TextStyle(color: Colors.white),
-                ),
+            ),
+            Container(width: 10),
+            TextButton(
+              onPressed: () => switchChinese(),
+              child: Text(
+                "中",
+                style: TextStyle(color: Colors.white),
               ),
-              TextButton(
-                onPressed: () => switchEnglish(),
-                child: Text(
-                  "ENG",
-                  style: TextStyle(color: Colors.white),
-                ),
+            ),
+            TextButton(
+              onPressed: () => switchEnglish(),
+              child: Text(
+                "ENG",
+                style: TextStyle(color: Colors.white),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-        body: Column(
+      ),
+
+      //body content
+      body: Stack(children: [
+        //bottom level
+        Image.asset("images/background3.jpg"),
+
+        //top level
+        Column(
           children: <Widget>[
             //建築背景
             Container(
@@ -161,7 +164,7 @@ class _HomePageState extends State<HomePage> {
                     ))),
           ],
         ),
-      )
-    ]);
+      ]),
+    );
   }
 }

@@ -5,10 +5,10 @@ class TestPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: <Widget>[Background()]);
+    return Stack(children: <Widget>[background(), Container(child: null)]);
   }
 }
 
 Widget background() {
-  return Image.asset("images/");
+  return Image.asset("images/background.jpg");
 }

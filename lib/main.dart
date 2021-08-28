@@ -45,117 +45,123 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
+    return Stack(children: <Widget>[
+      //background
+      Image.asset("images/background.jpg"),
+
+      //top level
+      Scaffold(
+        appBar: AppBar(
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                width: 220,
+                child: Text(
+                  (language == "Chinese") ? "主頁" : "Home Page",
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Container(width: 10),
+              TextButton(
+                onPressed: () => switchChinese(),
+                child: Text(
+                  "中",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              TextButton(
+                onPressed: () => switchEnglish(),
+                child: Text(
+                  "ENG",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ],
+          ),
+        ),
+        body: Column(
+          children: <Widget>[
+            //建築背景
             Container(
-              width: 220,
-              child: Text(
-                (language == "Chinese") ? "主頁" : "Home Page",
-                textAlign: TextAlign.left,
-              ),
-            ),
-            Container(width: 10),
-            TextButton(
-              onPressed: () => switchChinese(),
-              child: Text(
-                "中",
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-            TextButton(
-              onPressed: () => switchEnglish(),
-              child: Text(
-                "ENG",
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
+                margin: const EdgeInsets.only(bottom: 16),
+                decoration: BoxDecoration(
+                    border: Border(
+                        bottom: Divider.createBorderSide(context,
+                            color: Color(0XFFc06c30), width: 1))),
+                width: 500,
+                height: 90,
+                child: GestureDetector(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => BuildingBackgroundPage())),
+                    child: Row(
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.only(left: 21.0)),
+                        Text(
+                          (language == "Chinese")
+                              ? "建築背景"
+                              : "Building Background",
+                          style:
+                              TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
+                        ),
+                      ],
+                    ))),
+
+            //新亞四大活動
+            Container(
+                margin: const EdgeInsets.only(bottom: 16),
+                decoration: BoxDecoration(
+                    border: Border(
+                        bottom: Divider.createBorderSide(context,
+                            color: Color(0XFFc06c30), width: 1))),
+                width: 500,
+                height: 90,
+                child: GestureDetector(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                FourMajorActivitiesPage(language))),
+                    child: Row(
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.only(left: 21.0)),
+                        Text(
+                          (language == "Chinese")
+                              ? "新亞四大活動"
+                              : "Four Major Activities",
+                          style:
+                              TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
+                        ),
+                      ],
+                    ))),
+
+            //簡史
+            Container(
+                margin: const EdgeInsets.only(bottom: 16),
+                decoration: BoxDecoration(
+                    border: Border(
+                        bottom: Divider.createBorderSide(context,
+                            color: Color(0XFFc06c30), width: 1))),
+                width: 500,
+                height: 90,
+                child: GestureDetector(
+                    onTap: () => Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HistoryPage())),
+                    child: Row(
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.only(left: 21.0)),
+                        Text(
+                          (language == "Chinese") ? "簡史" : "History",
+                          style:
+                              TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
+                        ),
+                      ],
+                    ))),
           ],
         ),
-      ),
-      body: Column(
-        children: <Widget>[
-          //建築背景
-          Container(
-              margin: const EdgeInsets.only(bottom: 16),
-              decoration: BoxDecoration(
-                  border: Border(
-                      bottom: Divider.createBorderSide(context,
-                          color: Color(0XFFc06c30), width: 1))),
-              width: 500,
-              height: 90,
-              child: GestureDetector(
-                  onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => BuildingBackgroundPage())),
-                  child: Row(
-                    children: <Widget>[
-                      Padding(padding: EdgeInsets.only(left: 21.0)),
-                      Text(
-                        (language == "Chinese")
-                            ? "建築背景"
-                            : "Building Background",
-                        style:
-                            TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
-                      ),
-                    ],
-                  ))),
-
-          //新亞四大活動
-          Container(
-              margin: const EdgeInsets.only(bottom: 16),
-              decoration: BoxDecoration(
-                  border: Border(
-                      bottom: Divider.createBorderSide(context,
-                          color: Color(0XFFc06c30), width: 1))),
-              width: 500,
-              height: 90,
-              child: GestureDetector(
-                  onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              FourMajorActivitiesPage(language))),
-                  child: Row(
-                    children: <Widget>[
-                      Padding(padding: EdgeInsets.only(left: 21.0)),
-                      Text(
-                        (language == "Chinese")
-                            ? "新亞四大活動"
-                            : "Four Major Activities",
-                        style:
-                            TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
-                      ),
-                    ],
-                  ))),
-
-          //簡史
-          Container(
-              margin: const EdgeInsets.only(bottom: 16),
-              decoration: BoxDecoration(
-                  border: Border(
-                      bottom: Divider.createBorderSide(context,
-                          color: Color(0XFFc06c30), width: 1))),
-              width: 500,
-              height: 90,
-              child: GestureDetector(
-                  onTap: () => Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HistoryPage())),
-                  child: Row(
-                    children: <Widget>[
-                      Padding(padding: EdgeInsets.only(left: 21.0)),
-                      Text(
-                        (language == "Chinese") ? "簡史" : "History",
-                        style:
-                            TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
-                      ),
-                    ],
-                  ))),
-        ],
-      ),
-    );
+      )
+    ]);
   }
 }

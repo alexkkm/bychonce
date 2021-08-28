@@ -61,6 +61,7 @@ flutter:
     - images/decorationday.jpg
     - images/nasing.jpg
     - images/nanight.jpg
+    - images/background.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

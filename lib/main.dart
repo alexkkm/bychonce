@@ -1,3 +1,4 @@
+import 'package:bychonce/CommentBoard.dart';
 import 'package:flutter/material.dart';
 import 'package:bychonce/Activites/FourMajorActivitiesPage.dart';
 import 'package:bychonce/History/HistoryPage.dart';
@@ -157,6 +158,31 @@ class _HomePageState extends State<HomePage> {
                         Padding(padding: EdgeInsets.only(left: 21.0)),
                         Text(
                           (language == "Chinese") ? "簡史" : "History",
+                          style:
+                              TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
+                        ),
+                      ],
+                    ))),
+
+            //Comment Board
+            Container(
+                margin: const EdgeInsets.only(bottom: 16),
+                decoration: BoxDecoration(
+                    border: Border(
+                        bottom: Divider.createBorderSide(context,
+                            color: Color(0XFFc06c30), width: 1))),
+                width: 500,
+                height: 90,
+                child: GestureDetector(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CommentBoard())),
+                    child: Row(
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.only(left: 21.0)),
+                        Text(
+                          (language == "Chinese") ? "留言版" : "Comment Board",
                           style:
                               TextStyle(fontSize: 25, color: Color(0XFFc06c30)),
                         ),

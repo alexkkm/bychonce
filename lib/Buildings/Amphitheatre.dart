@@ -29,10 +29,13 @@ class _AmphitheatrePageState extends State<AmphitheatrePage> {
         title: Row(
           children: [
             Container(
-                width: 175,
-                child: Text((language == "Chinese")
-                    ? "圓形廣場"
-                    : "New Asia Amphitheatre")),
+              width: 175,
+              child: Text(
+                ((language == "Chinese") ? "圓形廣場" : "New Asia Amphitheatre"),
+                style: TextStyle(fontSize: 25),
+                textAlign: TextAlign.left,
+              ),
+            ),
             TextButton(
               onPressed: () => switchChinese(),
               child: Text(

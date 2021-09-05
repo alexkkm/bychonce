@@ -29,9 +29,13 @@ class _MrsDavidLamHallPageState extends State<MrsDavidLamHallPage> {
         title: Row(
           children: [
             Container(
-                width: 175,
-                child: Text(
-                    (language == "Chinese") ? "林耀明夫人堂" : "Mrs David Lam Hall")),
+              width: 175,
+              child: Text(
+                ((language == "Chinese") ? "林耀明夫人堂" : "Mrs David Lam Hall"),
+                style: TextStyle(fontSize: 25),
+                textAlign: TextAlign.left,
+              ),
+            ),
             TextButton(
               onPressed: () => switchChinese(),
               child: Text(

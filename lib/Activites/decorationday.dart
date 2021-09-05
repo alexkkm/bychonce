@@ -29,10 +29,13 @@ class _DecorationDayPageState extends State<DecorationDayPage> {
         title: Row(
           children: [
             Container(
-                width: 175,
-                child: Text((language == "Chinese")
-                    ? "新亞書院校慶"
-                    : "New Asia DecorationDay")),
+              width: 175,
+              child: Text(
+                ((language == "Chinese") ? "新亞書院校慶" : "New Asia DecorationDay"),
+                style: TextStyle(fontSize: 25),
+                textAlign: TextAlign.left,
+              ),
+            ),
             TextButton(
               onPressed: () => switchChinese(),
               child: Text(
